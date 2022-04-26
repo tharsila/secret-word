@@ -1,4 +1,4 @@
-import './StartScreen.css';
+import './StartScreen.scss';
 
 const StartScreen = () => {
   return (
