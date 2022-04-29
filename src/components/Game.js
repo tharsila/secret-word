@@ -48,7 +48,7 @@ const Game = ({
           required onChange={(event) => setLetter(event.target.value)} 
           value={letter} 
           ref={letterInputRef} />
-          <button onClick={verifyLetter}>Jogar</button>
+          <button>Jogar</button>
         </form>
       </div>
 
