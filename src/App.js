@@ -61,7 +61,6 @@ function App() {
 
   /* process the letter input */
   const verifyLetter = ((letter) => {
-    console.log(letter);
     const normalizedLetter = letter.toLowerCase();
 
     /* check if letter has alredy been utilized */
@@ -81,8 +80,6 @@ function App() {
     }
 
   })
-
- 
 
   /* restart the game */
   const retry = () => {
