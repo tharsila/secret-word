@@ -60,10 +60,29 @@ function App() {
   }
 
   /* process the letter input */
-  const verifyLetter = (letter) => {
-    console.log(letter)
-    /* setGameStage(stages[2].name); */
-  }
+  const verifyLetter = ((letter) => {
+    console.log(letter);
+    const normalizedLetter = letter.toLowerCase();
+
+    /* check if letter has alredy been utilized */
+    if (guessedLetters.includes(normalizedLetter) || wrongLetters.includes(normalizedLetter)) {
+      return
+    }
+    
+    /* show guessed letters or remove a chance */
+    if (letters.includes(normalizedLetter)) {
+      setGuessedLetters((actualGuessedLetters) => [
+        ...actualGuessedLetters, normalizedLetter,
+      ])
+    } else {
+      setWrongLetters((actualWrongLetters) => [
+        ...actualWrongLetters, normalizedLetter,
+      ])
+    }
+
+  })
+
+ 
 
   /* restart the game */
   const retry = () => {
